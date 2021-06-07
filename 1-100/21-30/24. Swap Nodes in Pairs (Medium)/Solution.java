@@ -4,15 +4,15 @@ class Solution {
         ListNode curr = head, prev = null, pprev = null;
         if (head.next != null) head = head.next;
         while (curr.next != null){
-            pprev = prev;
-            prev = curr;
-            curr = curr.next;
+            pprev = prev; //before pair
+            prev = curr; // first pair element
+            curr = curr.next; //second pair element
             prev.next = curr.next;
             curr.next = prev;
             if (pprev != null) pprev.next = curr;
             curr = prev;
             if (curr.next != null){
-                curr = curr.next;
+                curr = curr.next;//move to next pair
             }
         }
         return head;
