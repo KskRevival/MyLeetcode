@@ -21,3 +21,5 @@ public class Solution {
         return string.Join(" ", mas);
     }
 }
+//225ms 72,3%
+//51,5mb 14,81%
